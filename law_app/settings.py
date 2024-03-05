@@ -31,7 +31,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     os.getenv("DJANGO_ALLOWED_HOSTS", "localhost,127.0.0.1,[::1]").split(","),
-    "law-app- fauzanandri-project.koyeb.app"
+    "law-app-fauzanandri-project.koyeb.app",
 ]
 
 
