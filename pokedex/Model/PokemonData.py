@@ -7,7 +7,7 @@ from io import BytesIO
 
 from progress.bar import ShadyBar
 
-from Utils.DataTools import DataSaver
+from ..Utils.DataTools import DataSaver
 
 class Pokedex:
     JsonNameKey = "name"
@@ -34,7 +34,7 @@ class Pokedex:
     def __init__(self):
         self.m_data = {}
         self.m_maxPokemonNumber = 151
-        self.m_defaultDataFolder = "./data"
+        self.m_defaultDataFolder = "./pokedex/data"
         self.m_defaultJsonFileName = f"{self.m_defaultDataFolder}/pokemon_data.json"
 
     def getGeneration(self, pokemonNumber):
