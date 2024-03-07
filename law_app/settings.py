@@ -30,6 +30,7 @@ SECRET_KEY = 'django-insecure-7_r+fb^y5n&iu#ld$w68yy!2q*xt(2pfd7b66*!s*wt((_n(s)
 DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
+CSRF_TRUSTED_ORIGINS = ['https://law-app-fauzanandri-project.koyeb.app/','https://127.0.0.1:8000/']
 
 
 # Application definition
@@ -49,7 +50,6 @@ MIDDLEWARE = [
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
