@@ -3,8 +3,9 @@ import os
 from django.conf import settings
 from django.shortcuts import render
 from django.http import JsonResponse
-from .forms import PokemonForm
 
+from .models import Pokemon
+from .forms import PokemonForm
 from .Model.PokemonModel import PokemonModel
 from .Model.PokemonData import Pokedex
 from .Utils.DataTools import DataSaver
@@ -26,6 +27,9 @@ def predict_pokemon(request):
         
         context = pokemonData
         
+        # Delete all pokemon object from table
+        Pokemon.objects.all().delete()
+        
         return render(request, 'pokemon.html', context)
     else:
         form = PokemonForm()
@@ -34,6 +38,4 @@ def predict_pokemon(request):
         }
         
     return render(request, 'upload.html', context)
-
-# def display_image(self):
     
